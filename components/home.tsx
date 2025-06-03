@@ -6,22 +6,23 @@ import {
   Button,
   StyleSheet,
 } from 'react-native';
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ListaFilmes from './ListaFilmes';
+import Search from '../components/search' 
 
-type Tarefa = {
+type Filme = {
   id: string;
   nome: string;
 };
 
 export default function Input() {
   const [Filme, setFilme] = useState('');
-  const [lista, setLista] = useState<Tarefa[]>([]);
+  const [lista, setLista] = useState<Filme[]>([]);
 
   const adicionarFilme = () => {
     if (Filme.trim() === '') return;
 
-    const novoFilme: filme = {
+    const novoFilme: Filme = {
       id: Date.now().toString(),
       nome: Filme,
     };
@@ -29,6 +30,8 @@ export default function Input() {
     setLista([...lista, novoFilme]);
     setFilme('');
   };
+
+  const Tab = createBottomTabNavigator();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -40,11 +43,10 @@ export default function Input() {
         value={Filme}
         onChangeText={setFilme}
       />
-
       <Button title="Adicionar" onPress={adicionarFilme} />
-
       <ListaFilmes lista={lista} />
     </SafeAreaView>
+    
   );
 }
 
