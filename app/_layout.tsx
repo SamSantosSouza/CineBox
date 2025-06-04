@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
-
+import HomeTabs from '../components/hometabs';
 import HomeScreen from '../components/home';
 import BibliotecaScreen from '@/components/consulta';
 import SearchTabs from '@/components/search';
@@ -18,7 +18,7 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-        <Drawer.Navigator initialRouteName="Home" screenOptions={{drawerStyle: { backgroundColor: '#BFBBB4'} }}>
+        <Drawer.Navigator initialRouteName="Home" screenOptions={{drawerStyle: { backgroundColor: '#DED6C8'}, drawerActiveTintColor: '#A66844',  drawerInactiveTintColor: '#777',drawerActiveBackgroundColor: '##F0F1EC', headerStyle: { backgroundColor: '#DED6C8' } }}>
           <Drawer.Screen name="Home" component={HomeScreen}   options={{ drawerIcon: ({ focused, size, color }) => (
           <Icon name="home-outline" size={size} color={color} />),}} />
           <Drawer.Screen name="Pesquisar" component={SearchTabs} options={{ drawerIcon: ({ focused, size, color }) => (
