@@ -1,11 +1,11 @@
-// components/HomeTabs.tsx
 
-import React from 'react';
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import Home from './home';         // Seu componente filmes
-import News from './news'; // Tela comunidade (criar abaixo)
+import Home from './home';
+import News from './news';
 
 const Tab = createBottomTabNavigator();
 
@@ -13,7 +13,7 @@ export default function HomeTabs() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        headerShown: false, // Sem header no tab, o Drawer controla o header
+        headerShown: false, 
         tabBarActiveTintColor: '#A66844',
         tabBarInactiveTintColor: '#555',
         tabBarStyle: { backgroundColor: '#BFBBB4' },
@@ -22,7 +22,7 @@ export default function HomeTabs() {
 
           if (route.name === 'Filmes') {
             iconName = focused ? 'film' : 'film-outline';
-          } else if (route.name === 'Comunidade') {
+          } else if (route.name === 'News') {
             iconName = focused ? 'people' : 'people-outline';
           }
 
@@ -31,7 +31,7 @@ export default function HomeTabs() {
       })}
     >
       <Tab.Screen name="Filmes" component={Home} />
-      <Tab.Screen name="Comunidade" component={News} />
+      <Tab.Screen name="News" component={News} />
     </Tab.Navigator>
   );
 }
