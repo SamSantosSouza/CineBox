@@ -47,26 +47,44 @@ export default function FormularioFilme({ onAdicionar }: Props) {
   );
 }
 
+// Mantenha toda a lógica, apenas ajuste os styles
 const styles = StyleSheet.create({
   input: {
-    borderColor: '#ccc',
+    borderColor: '#F2766B',
     borderWidth: 1,
-    padding: 8,
-    marginBottom: 12,
-    borderRadius: 4,
+    padding: 12,
+    marginBottom: 16,
+    borderRadius: 8,
+    color: '#0D0D0D',
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    placeholderTextColor: '#F2766B80',
+    fontSize: 16,
+    shadowColor: '#590A0A',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 3,
   },
   button: {
-    backgroundColor: '#A66844',
-    padding: 12,
+    backgroundColor: '#8C1414',
+    padding: 14,
     borderRadius: 8,
     alignItems: 'center',
     height: 50,
     width: 200,
     alignSelf: 'center',
+    marginTop: 10,
+    shadowColor: '#590A0A',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+    elevation: 5,
   },
   text: {
     color: 'white',
-    fontSize: 15,
+    fontSize: 16,
     fontWeight: 'bold',
+    textTransform: 'uppercase',
+    letterSpacing: 1,
   },
 });

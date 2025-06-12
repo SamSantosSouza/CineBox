@@ -13,17 +13,25 @@ export default function Filmes({ filmes, onAdicionar }) {
   );
 }
 
+// Apenas ajuste o estilo do título
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 40,
+    paddingTop: 20,
     paddingLeft: 10,
     paddingRight: 10,
+    backgroundColor: '#FFFFFF'
   },
   titulo: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
-    marginBottom: 16,
+    marginBottom: 24,
     textAlign: 'center',
+    color: '#F2766B',
+    textShadowColor: 'rgba(89, 10, 10, 0.3)',
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 4,
+    letterSpacing: 0.5,
   },
 });
+

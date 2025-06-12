@@ -49,7 +49,7 @@ export default function Home() {
         headerShown: false,
         tabBarActiveTintColor: '#A66844',
         tabBarInactiveTintColor: '#555',
-        tabBarStyle: { backgroundColor: '#191726' },
+        tabBarStyle: { backgroundColor: '#590A0A' },
         tabBarIcon: ({ focused, color, size }) => {
           let iconName = 'home-outline';
 
